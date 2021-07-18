@@ -1,10 +1,86 @@
 @use '../util' as *;
+// https://codepen.io/SaraSoueidan/pen/jpBbrq/?editors=1100
 
 .toggle {
+	display: grid;
+	grid-template-columns: 1fr rem(60) 1fr;
+	grid-template-rows: repeat(2, 1fr);
+	gap: rem(4.8) rem(8);
+	border: none;
+	margin: 0;
+
+	label {
+		font-size: rem(14);
+		align-self: center;
+
+		&[for='dark'] {
+			grid-column: 1 / 2;
+			justify-self: end;
+		}
+		&[for='system'] {
+			grid-column: 1 / 4;
+			grid-row: 2 / 3;
+			justify-self: center;
+			align-self: start;
+		}
+		&[for='light'] {
+			grid-column: 3 / 4;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		height: rem(24);
+	}
+
+	input[type='radio'] {
+		margin: 0 rem(-2) 0 rem(-2);
+		opacity: 0;
+		width: rem(20);
+		height: rem(24);
+
+		&:focus ~ .toggle__button {
+			border: 2px solid white;
+		}
+	}
+
+	&__background {
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		border-radius: rem(12);
+		background: linear-gradient(
+			225deg,
+			var(--toggle-bg-end) 0%,
+			var(--toggle-bg-start) 98.02%
+		);
+		pointer-events: none;
+	}
+
 	&__button {
-		width: rem(16);
-		height: rem(16);
+		position: absolute;
+		left: rem(3);
+		top: rem(3);
+		right: 100%;
+		width: rem(18);
+		height: rem(18);
 		border-radius: 50%;
-		background-color: var(--toggle);
+		background-color: var(--dark-bg);
+		transition: all 150ms ease-in-out;
+	}
+
+	#light:checked ~ .toggle__button {
+		left: calc(100% - 21px);
+		right: 3px;
+	}
+
+	#system:checked ~ .toggle__button {
+		left: 50%;
+		right: auto;
+		transform: translate(-50%);
 	}
 }
