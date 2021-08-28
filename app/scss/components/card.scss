@@ -1,150 +1,152 @@
 @use '../util' as *;
 
 .cards {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: rem(30);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(30);
 
-	@include breakpoint(medium) {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-	@include breakpoint(large) {
-		grid-template-columns: repeat(4, 1fr);
-	}
+  @include breakpoint(large) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .card {
-	position: relative;
-	overflow: hidden;
-	background: var(--dark-card);
-	color: var(--dark-text1);
-	padding: rem(25);
-	border-radius: rem(5);
-	text-align: center;
-	transition: background 150ms ease-in-out;
-	cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: var(--card-bg);
+  color: var(--dark-text1);
+  padding: rem(25);
+  border-radius: rem(5);
+  text-align: center;
+  transition: background 150ms ease-in-out;
+  cursor: pointer;
 
-	&:hover {
-		background: var(--dark-card-hover);
-	}
+  &:hover {
+    background: var(--card-hover);
+  }
 
-	&--facebook {
-		border-top: rem(5) solid var(--facebook);
-	}
+  &--facebook {
+    border-top: rem(5) solid var(--facebook);
+  }
 
-	&--twitter {
-		border-top: rem(5) solid var(--twitter);
-	}
+  &--twitter {
+    border-top: rem(5) solid var(--twitter);
+  }
 
-	&--instagram {
-		padding-top: rem(30);
+  &--instagram {
+    padding-top: rem(30);
 
-		&::before {
-			content: '';
-			position: absolute;
-			display: block;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: rem(5);
-			background: linear-gradient(
-				225deg,
-				var(--instagram-end),
-				var(--instagram-middle) 50.91%,
-				var(--instagram-start) 100%
-			); // var(--instagram-start);
-		}
-		//border-top: rem(5) solid linear-gradient(225deg, hsl(329, 70%, 58%) 0%, hsl(5, 77%, 71%) 50.91%, #fdc366 100%);
-	}
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: rem(5);
+      background: linear-gradient(
+        225deg,
+        var(--instagram-end),
+        var(--instagram-middle) 50.91%,
+        var(--instagram-start) 100%
+      ); // var(--instagram-start);
+    }
+    //border-top: rem(5) solid linear-gradient(225deg, hsl(329, 70%, 58%) 0%, hsl(5, 77%, 71%) 50.91%, #fdc366 100%);
+  }
 
-	&--youtube {
-		border-top: rem(5) solid var(--youtube);
-	}
+  &--youtube {
+    border-top: rem(5) solid var(--youtube);
+  }
 
-	&__platform {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: rem(20);
-		margin-top: rem(5);
-		margin-bottom: rem(28);
-	}
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(20);
+    margin-top: rem(5);
+    margin-bottom: rem(28);
+  }
 
-	&__subtitle {
-		font-size: rem(14);
-		font-weight: 700;
-	}
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--text-color2);
+  }
 
-	&__icon {
-		margin-right: rem(8);
+  &__icon {
+    margin-right: rem(8);
 
-		&--facebook {
-		}
+    &--facebook {
+    }
 
-		&--twitter {
-		}
+    &--twitter {
+    }
 
-		&--instagram {
-		}
+    &--instagram {
+    }
 
-		&--youtube {
-		}
-	}
+    &--youtube {
+    }
+  }
 
-	&__username {
-		font-size: rem(12);
-		font-weight: 700;
-	}
+  &__username {
+    font-size: rem(12);
+    font-weight: 700;
+    color: var(--text-color2);
+  }
 
-	&__followers {
-		margin-bottom: rem(25);
-	}
+  &__followers {
+    margin-bottom: rem(25);
+  }
 
-	&__count {
-		color: var(--light-bg);
-		font-weight: 700;
-		letter-spacing: rem(-2);
-		line-height: 1;
-		margin-bottom: rem(4);
+  &__count {
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: rem(-2);
+    line-height: 1;
+    margin-bottom: rem(4);
 
-		&--big {
-			font-size: rem(56);
-		}
+    &--big {
+      font-size: rem(56);
+    }
 
-		&--small {
-			font-size: rem(32);
-		}
-	}
+    &--small {
+      font-size: rem(32);
+    }
+  }
 
-	&__label {
-		font-size: rem(12);
-		letter-spacing: rem(5);
-		font-weight: 400;
-		color: var(--dark-text1);
-		text-transform: uppercase;
-	}
+  &__label {
+    font-size: rem(12);
+    letter-spacing: rem(5);
+    font-weight: 400;
+    color: var(--text-color2);
+    text-transform: uppercase;
+  }
 
-	&__change {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: rem(12);
-		font-weight: 700;
+  &__change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(12);
+    font-weight: 700;
 
-		&--up {
-			color: var(--limegreen);
-		}
+    &--up {
+      color: var(--limegreen);
+    }
 
-		&--down {
-			color: var(--brightred);
-		}
+    &--down {
+      color: var(--brightred);
+    }
 
-		img {
-			margin-right: rem(4);
-		}
-	}
+    img {
+      margin-right: rem(4);
+    }
+  }
 
-	&__number {
-	}
+  &__number {
+  }
 }

@@ -8,6 +8,8 @@ Use fieldset, legend, radio inputs
 
 Switching between light/dark modes via JS and Prefers-color-scheme media query -- https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
+https://piccalil.li/tutorial/create-a-user-controlled-dark-or-light-mode/
+
 Three option toggle: light/dark/system pref -- https://codepen.io/renddrew/pen/bRomab?editors=1100
 
 CSS Variables (custom properties) -- https://css-tricks.com/updating-a-css-variable-with-javascript/
@@ -45,3 +47,8 @@ Outline for video:
   - role="contentinfo" to footer
   - aria-label="" for platform overview and platform details
   - Add screenreader-only h3 tags for card titles
+
+--
+
+Semantic HTML and accessibility -- https://www.youtube.com/watch?v=qSNUi7pRmWg
+Inclusive cards -- https://inclusive-components.design/cards/

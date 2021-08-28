@@ -3,25 +3,26 @@
 h1,
 h2,
 h3 {
-	margin-top: 0;
-	line-height: 1.1;
+  margin-top: 0;
+  line-height: 1.1;
 }
 
 h1 {
-	font-size: rem(24);
-	margin-bottom: rem(3);
-	@include breakpoint(large) {
-		font-size: rem(28);
-	}
+  font-size: rem(24);
+  margin-bottom: rem(3);
+  @include breakpoint(large) {
+    font-size: rem(28);
+  }
 }
 
 h2 {
-	font-size: rem(24);
-	margin-bottom: rem(24);
+  font-size: rem(24);
+  margin-bottom: rem(24);
+  color: var(--text-color2);
 }
 
 a,
 a:visited,
 a:active {
-	text-decoration: none;
+  text-decoration: none;
 }
