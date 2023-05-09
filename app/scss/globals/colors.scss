@@ -11,6 +11,7 @@
   --toggle-bg-start: hsl(210, 78%, 56%);
   --toggle-bg-end: hsl(146, 68%, 55%);
   --toggle-light: hsl(230, 19%, 60%);
+  --toggle-focus-light: hsl(0, 0%, 100%);
   --toggle-button-light: hsl(228, 46%, 96%);
   --dark-bg: hsl(230, 17%, 14%);
   --dark-top-bg: hsl(232, 19%, 15%);
@@ -48,6 +49,7 @@
       var(--toggle-bg-start) 98.02%
     );
     --toggle-button: var(--dark-bg);
+    --toggle-focus: var(--toggle-focus-light);
   }
 }
 
@@ -60,6 +62,7 @@ body.light {
   --toggle: var(--toggle-light);
   --toggle-bg: var(--toggle-bg-light);
   --toggle-button: var(--toggle-button-light);
+  --toggle-focus: var(--dark-bg);
 }
 
 body.dark {
@@ -75,4 +78,5 @@ body.dark {
     var(--toggle-bg-start) 98.02%
   );
   --toggle-button: var(--dark-bg);
+  --toggle-focus: var(--toggle-focus-light);
 }

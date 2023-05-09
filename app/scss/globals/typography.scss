@@ -9,7 +9,7 @@ h3 {
 
 h1 {
   font-size: rem(24);
-  margin-bottom: rem(3);
+  margin-bottom: rem(5);
   @include breakpoint(large) {
     font-size: rem(28);
   }
@@ -17,7 +17,7 @@ h1 {
 
 h2 {
   font-size: rem(24);
-  margin-bottom: rem(24);
+  margin-bottom: rem(27);
   color: var(--text-color2);
 }
 
