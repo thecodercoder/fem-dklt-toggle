@@ -7,10 +7,17 @@
   border: none;
   margin: 0;
 
+  @include breakpoint-down(small) {
+    margin-top: rem(30);
+    padding: rem(20) 0 0 0;
+    text-align: left;
+    border-top: rem(1) solid var(--text-color2);
+  }
+
   label {
     font-size: rem(14);
     font-weight: 700;
-    color: var(--toggle);
+    color: var(--text-color2);
 
     &[for='dark'] {
       line-height: rem(24);
@@ -28,9 +35,11 @@
     opacity: 0;
     width: rem(24);
     height: rem(24);
+    cursor: pointer;
 
     &:focus ~ .toggle__button {
-      border: 2px solid white;
+      border: rem(0.015) solid var(--toggle-focus);
+      height: rem(17.985);
     }
   }
 
@@ -48,7 +57,7 @@
   &__button {
     position: absolute;
     left: rem(3);
-    top: rem(3);
+    top: rem(2.778);
     right: 100%;
     width: rem(18);
     height: rem(18);
@@ -58,8 +67,8 @@
   }
 
   #light:checked ~ .toggle__button {
-    left: calc(100% - 21px);
-    right: 3px;
+    left: calc(100% - rem(22.985));
+    right: rem(3);
   }
 
   #system:checked ~ .toggle__button {
