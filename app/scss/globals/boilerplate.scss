@@ -6,7 +6,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: inherit;  // it will inherit from the html selector
 }
 
 body {
