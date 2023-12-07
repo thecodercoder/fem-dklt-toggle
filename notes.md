@@ -52,3 +52,7 @@ Outline for video:
 
 Semantic HTML and accessibility -- https://www.youtube.com/watch?v=qSNUi7pRmWg
 Inclusive cards -- https://inclusive-components.design/cards/
+
+-------------------------------------------------------------------------------------------------
+The Gulp workflow is useful for possible future mantainance-related issues with scss
+install gulp using *npm install gulp-cli -g* -g ensures that the installation is global so that gulp can be used from any folder
